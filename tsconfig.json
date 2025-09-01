@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", // You can use ES2020 or later for better async/await support
+    "module": "CommonJS", // Node.js uses CommonJS module system
+    "rootDir": "./src", // Your source code is in the 'src' folder
+    "outDir": "./dist", // Output folder for the compiled files
+    "strict": true, // Enable strict type checking options
+    "esModuleInterop": true, // Enables default import syntax for commonjs modules
+    "skipLibCheck": true, // Skip type checking of declaration files to speed up build
+    "forceConsistentCasingInFileNames": true, // Ensures file names are consistent
+    "resolveJsonModule": true, // Allow importing JSON files
+    "isolatedModules": true, // Ensure that every file can be safely transpiled independently
+    "noImplicitAny": true, // Disallow 'any' type unless explicitly defined
+    "moduleResolution": "node", // Resolve modules like Node.js does
+    "lib": ["ES2020", "DOM"], // Include libraries for working with ES2020 and the DOM
+    "declaration": true, // Generate declaration files (.d.ts)
+    "declarationMap": true, // Generates a map for declaration files
+    "sourceMap": true, // Enable source maps for debugging
+    "allowSyntheticDefaultImports" : true,
+  },
+  "include": [
+    "src/**/*.ts" // All TypeScript files in the 'src' directory
+, "src/config/config.ts"  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules folder to avoid unnecessary type checking
+    "dist" // Exclude the output directory to avoid issues with compiled files
+  ]
+}
