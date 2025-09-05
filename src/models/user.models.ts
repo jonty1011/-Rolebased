@@ -85,7 +85,8 @@ declare roles?: Role[];
         sequelize,
         tableName:"Users",
         modelName:"User",
-        timestamps:true
+        timestamps:true,
+        //paranoid:true,    
     }
   )
     return User

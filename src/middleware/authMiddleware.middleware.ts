@@ -1,7 +1,8 @@
 import { Request,Response, NextFunction } from "express"
 import jwt from "jsonwebtoken";
 import { statusCodes } from "../constants/statusCodes.constants"
-import { User } from "../models/user.models";
+import { User } from "../interfaces/authInterface.interfces";
+
 
 
 export const authMiddleware = async(req:Request,res:Response, next:NextFunction)=>{
