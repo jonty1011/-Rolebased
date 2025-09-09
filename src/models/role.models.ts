@@ -17,7 +17,7 @@ export class Role extends Model<InferAttributes<Role>,InferCreationAttributes<Ro
  static associate(models:any){
 
       Role.belongsToMany(models.User, {
-    through: models.UserRole,
+    through: models.UserRole, 
     foreignKey: "roleId",
     otherKey: "userId",
     as: "users",
